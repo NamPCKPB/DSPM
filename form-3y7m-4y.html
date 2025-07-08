@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>DSPM - อายุ3ปี7เดือน-4ปี</title>
+</head>
+<body>
+  <h2>แบบประเมิน DSPM อายุ3ปี7เดือน-4ปี</h2>
+  <form id="dspmForm">
+    <p>1. กระโดดขาเดียวได้ อย่างน้อย 2 ครั้ง (GM) </p>
+    <input type="radio" name="q1" value="1"> ทำได้
+    <input type="radio" name="q1" value="0"> ทำไม่ได้
+
+    <p>2. ตัดกระดาษรูปสี่เหลี่ยมจัตุรัสขนาด 10 ซม. ออกเป็น 2 ชิ้น [โดยใช้กรรไกรปลายมน] (FM) </p>
+    <input type="radio" name="q2" value="1"> ทำได้
+    <input type="radio" name="q2" value="0"> ทำไม่ได้
+
+    <p>3. เลียนแบบวาดรูป+กากบาท (FM) </p>
+    <input type="radio" name="q2" value="1"> ทำได้
+    <input type="radio" name="q2" value="0"> ทำไม่ได้
+
+    <p>4. เลือกวัตถุที่มีขนาดใหญ่กว่าและเล็กกว่า (RL) </p>
+    <input type="radio" name="q3" value="1"> ทำได้
+    <input type="radio" name="q3" value="0"> ทำไม่ได้
+
+    <p>5. พูดเป็นประโยค 3 คำ ติดต่อกัน โดยมีความหมาย และเหมาะสมกับโอกาสได้ (EL) </p>
+    <input type="radio" name="q4" value="1"> ทำได้
+    <input type="radio" name="q4" value="0"> ทำไม่ได้
+
+    <p>6. ใส่กระดุมขนาดใหญ่อย่างน้อย 2 ซม. ได้เอง 3 เม็ด (PS) </p>
+    <input type="radio" name="q5" value="1"> ทำได้
+    <input type="radio" name="q5" value="0"> ทำไม่ได้
+
+    <br><br>
+    <button type="button" onclick="calculateResult()">ประเมินผล</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calculateResult() {
+      let score = 0;
+      for (let i = 1; i <= 6; i++) {
+        const val = document.querySelector('input[name="q' + i + '"]:checked');
+        if (val) score += parseInt(val.value);
+      }
+
+      let result = "";
+      if (score >= 5) {
+        result = "✅ พัฒนาการปกติ (ตรงกับปิงปองจราจรชีวิต7สี=สีขาว) )";
+      } else if (score == 4) {
+        result = "⚠️ เสี่ยงล่าช้า";
+      } else {
+        result = "❗ ควรส่งต่อผู้เชี่ยวชาญ";
+      }
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>

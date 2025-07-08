@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>DSPM - อายุ3ปี6เดือน</title>
+</head>
+<body>
+  <h2>แบบประเมิน DSPM อายุ3ปี6เดือน</h2>
+  <form id="dspmForm">
+    <p>1. ยืนขาเดียว 5 วินาที (GM) </p>
+    <input type="radio" name="q1" value="1"> ทำได้
+    <input type="radio" name="q1" value="0"> ทำไม่ได้
+
+    <p>2. ใช้แขนรับลูกบอลได้ (GM) </p>
+    <input type="radio" name="q1" value="1"> ทำได้
+    <input type="radio" name="q1" value="0"> ทำไม่ได้
+
+    <p>3. แยกรูปทรงเรขาคณิตได้ 3 แบบ (FM) </p>
+    <input type="radio" name="q2" value="1"> ทำได้
+    <input type="radio" name="q2" value="0"> ทำไม่ได้
+
+    <p>4. ประกอบชิ้นส่วนของรูปภาพที่ถูกตัดออกเป็น 3 ชิ้นได้ (FM) </p>
+    <input type="radio" name="q2" value="1"> ทำได้
+    <input type="radio" name="q2" value="0"> ทำไม่ได้
+
+    <p>5. เขียนรูปวงกลมตามแบบได้ (FM) </p>
+    <input type="radio" name="q2" value="1"> ทำได้
+    <input type="radio" name="q2" value="0"> ทำไม่ได้
+
+    <p>6. วางวัตถุไว้ข้างหน้าและข้างหลังได้ตามคำสั่ง (RL) </p>
+    <input type="radio" name="q3" value="1"> ทำได้
+    <input type="radio" name="q3" value="0"> ทำไม่ได้
+
+    <p>7. เลือกจัดกลุ่มวัตถุตามประเภทภาพเสื้อผ้าได้ (RL) </p>
+    <input type="radio" name="q3" value="1"> ทำได้
+    <input type="radio" name="q3" value="0"> ทำไม่ได้
+
+    <p>8. พูดถึงเหตุการณ์ที่เพิ่งผ่านไปใหม่ๆได้ (EL) </p>
+    <input type="radio" name="q4" value="1"> ทำได้
+    <input type="radio" name="q4" value="0"> ทำไม่ได้
+
+    <p>9. พูด ขอ หรือ ขอบคุณ หรือ ให้ ได้เอง (EL) </p>
+    <input type="radio" name="q4" value="1"> ทำได้
+    <input type="radio" name="q4" value="0"> ทำไม่ได้
+
+    <p>10. บอกเพศของตนเองได้ถูกต้อง (PS) </p>
+    <input type="radio" name="q5" value="1"> ทำได้
+    <input type="radio" name="q5" value="0"> ทำไม่ได้
+
+    <p>11. ใส่เสื้อผ่าหน้าได้เองโดยไม่ต้องติดกระดุม (PS) </p>
+    <input type="radio" name="q5" value="1"> ทำได้
+    <input type="radio" name="q5" value="0"> ทำไม่ได้
+
+    <br><br>
+    <button type="button" onclick="calculateResult()">ประเมินผล</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calculateResult() {
+      let score = 0;
+      for (let i = 1; i <= 11; i++) {
+        const val = document.querySelector('input[name="q' + i + '"]:checked');
+        if (val) score += parseInt(val.value);
+      }
+
+      let result = "";
+      if (score >= 10) {
+        result = "✅ พัฒนาการปกติ (ตรงกับปิงปองจราจรชีวิต7สี=สีขาว) )";
+      } else if (score == 9) {
+        result = "⚠️ เสี่ยงล่าช้า";
+      } else {
+        result = "❗ ควรส่งต่อผู้เชี่ยวชาญ";
+      }
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>

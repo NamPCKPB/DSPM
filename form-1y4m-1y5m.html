@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>DSPM - อายุ1ปี4เดือน-1ปี5เดือน</title>
+</head>
+<body>
+  <h2>แบบประเมิน DSPM อายุ1ปี4เดือน-1ปี5เดือน</h2>
+  <form id="dspmForm">
+    <p>1. เดินลากของเล่นหรือสิ่งของได้ (GM) </p>
+    <input type="radio" name="q1" value="1"> ทำได้
+    <input type="radio" name="q1" value="0"> ทำไม่ได้
+
+    <p>2. ขีดเขียนได้เอง (FM) </p>
+    <input type="radio" name="q2" value="1"> ทำได้
+    <input type="radio" name="q2" value="0"> ทำไม่ได้
+
+    <p>3. ทำตามคำสั่งได้ง่ายโดยไม่มีท่าทางประกอบ (RL) </p>
+    <input type="radio" name="q3" value="1"> ทำได้
+    <input type="radio" name="q3" value="0"> ทำไม่ได้
+
+    <p>4. ตอบชื่อวัตถุได้ถูกต้อง (EL) </p>
+    <input type="radio" name="q4" value="1"> ทำได้
+    <input type="radio" name="q4" value="0"> ทำไม่ได้
+
+    <p>5. เล่นการใช้สิ่งของตามหน้าที่ได้มากขึ้นด้วยความสัมพันธ์ของ 2 สิ่งขึ้นไป (PS) </p>
+    <input type="radio" name="q5" value="1"> ทำได้
+    <input type="radio" name="q5" value="0"> ทำไม่ได้
+
+    <br><br>
+    <button type="button" onclick="calculateResult()">ประเมินผล</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calculateResult() {
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const val = document.querySelector('input[name="q' + i + '"]:checked');
+        if (val) score += parseInt(val.value);
+      }
+
+      let result = "";
+      if (score >= 4) {
+        result = "✅ พัฒนาการปกติ (ตรงกับปิงปองจราจรชีวิต7สี=สีขาว) )";
+      } else if (score == 3) {
+        result = "⚠️ เสี่ยงล่าช้า";
+      } else {
+        result = "❗ ควรส่งต่อผู้เชี่ยวชาญ";
+      }
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>
