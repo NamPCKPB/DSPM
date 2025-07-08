@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แบบประเมิน DSPM</title>
+</head>
+<body>
+  <h2>แบบประเมินเด็กอายุ 12 เดือน</h2>
+
+  <form id="dspmForm">
+    <p>1. ลุกนั่งจากท่านอนหงายได้เอง</p>
+    <input type="radio" name="q1" value="1"> ผ่าน
+    <input type="radio" name="q1" value="0"> ไม่ผ่าน
+
+    <p>2. หยิบของใส่ภาชนะ</p>
+    <input type="radio" name="q2" value="1"> ผ่าน
+    <input type="radio" name="q2" value="0"> ไม่ผ่าน
+
+    <p>3. เรียกชื่อแล้วหันหา</p>
+    <input type="radio" name="q3" value="1"> ผ่าน
+    <input type="radio" name="q3" value="0"> ไม่ผ่าน
+
+    <p>4. ตบมือเลียนแบบ</p>
+    <input type="radio" name="q4" value="1"> ผ่าน
+    <input type="radio" name="q4" value="0"> ไม่ผ่าน
+
+    <p>5. เรียก “พ่อ” หรือ “แม่” ได้</p>
+    <input type="radio" name="q5" value="1"> ผ่าน
+    <input type="radio" name="q5" value="0"> ไม่ผ่าน
+
+    <br><br>
+    <button type="button" onclick="calculateResult()">ประเมินผล</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calculateResult() {
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const val = document.querySelector('input[name="q' + i + '"]:checked');
+        if (val) score += parseInt(val.value);
+      }
+
+      let result = "";
+      if (score >= 4) {
+        result = "✅ พัฒนาการปกติ";
+      } else if (score == 3) {
+        result = "⚠️ เสี่ยงล่าช้า";
+      } else {
+        result = "❗ ควรส่งต่อผู้เชี่ยวชาญ";
+      }
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>
