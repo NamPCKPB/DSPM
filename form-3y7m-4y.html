@@ -16,20 +16,20 @@
     <input type="radio" name="q2" value="0"> ทำไม่ได้
 
     <p>3. เลียนแบบวาดรูป+กากบาท (FM) </p>
-    <input type="radio" name="q2" value="1"> ทำได้
-    <input type="radio" name="q2" value="0"> ทำไม่ได้
-
-    <p>4. เลือกวัตถุที่มีขนาดใหญ่กว่าและเล็กกว่า (RL) </p>
     <input type="radio" name="q3" value="1"> ทำได้
     <input type="radio" name="q3" value="0"> ทำไม่ได้
 
-    <p>5. พูดเป็นประโยค 3 คำ ติดต่อกัน โดยมีความหมาย และเหมาะสมกับโอกาสได้ (EL) </p>
+    <p>4. เลือกวัตถุที่มีขนาดใหญ่กว่าและเล็กกว่า (RL) </p>
     <input type="radio" name="q4" value="1"> ทำได้
     <input type="radio" name="q4" value="0"> ทำไม่ได้
 
-    <p>6. ใส่กระดุมขนาดใหญ่อย่างน้อย 2 ซม. ได้เอง 3 เม็ด (PS) </p>
+    <p>5. พูดเป็นประโยค 3 คำ ติดต่อกัน โดยมีความหมาย และเหมาะสมกับโอกาสได้ (EL) </p>
     <input type="radio" name="q5" value="1"> ทำได้
     <input type="radio" name="q5" value="0"> ทำไม่ได้
+
+    <p>6. ใส่กระดุมขนาดใหญ่อย่างน้อย 2 ซม. ได้เอง 3 เม็ด (PS) </p>
+    <input type="radio" name="q6" value="1"> ทำได้
+    <input type="radio" name="q6" value="0"> ทำไม่ได้
 
     <br><br>
     <button type="button" onclick="calculateResult()">ประเมินผล</button>
@@ -47,7 +47,7 @@
 
       let result = "";
       if (score >= 5) {
-        result = "✅ พัฒนาการปกติ (ตรงกับปิงปองจราจรชีวิต7สี=สีขาว) )";
+        result = "✅ พัฒนาการปกติ (ตรงกับปิงปองจราจรชีวิต7สี=สีขาว)";
       } else if (score == 4) {
         result = "⚠️ เสี่ยงล่าช้า";
       } else {
