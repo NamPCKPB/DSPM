@@ -3,55 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <title>DSPM - อายุ2ปี1เดือน-2ปี5เดือน</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to bottom, #fceabb, #f8b500);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: #ffffffee;
+      width: 95%;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    #result {
+      margin-top: 25px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #c0392b;
+      text-align: center;
+    }
+
+    .emoji {
+      font-size: 2em;
+      margin-right: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h2>แบบประเมิน DSPM อายุ2ปี1เดือน-2ปี5เดือน</h2>
-  <form id="dspmForm">
-    <p>1. กระโดดเท้าพ้นพื้นทั้ง 2 ข้าง (GM) </p>
-    <input type="radio" name="q1" value="1"> ทำได้
-    <input type="radio" name="q1" value="0"> ทำไม่ได้
 
-    <p>2. แก้ปัญหาง่ายๆโดยใช้เครื่องมือด้วยตนเอง (FM) </p>
-    <input type="radio" name="q2" value="1"> ทำได้
-    <input type="radio" name="q2" value="0"> ทำไม่ได้
+  <div class="container">
+    <h2>แบบประเมินพัฒนาการ DSPM<br>อายุ2ปี1เดือน-2ปี5เดือน</h2>
+    <form id="dspmForm">
+      <p>1. กระโดดเท้าพ้นพื้นทั้ง 2 ข้าง (GM) </p>
+      <label><input type="radio" name="q1" value="1"> ทำได้</label>
+      <label><input type="radio" name="q1" value="0"> ทำไม่ได้</label>
 
-    <p>3. ชี้อวัยวะ 7 ส่วน (RL) </p>
-    <input type="radio" name="q3" value="1"> ทำได้
-    <input type="radio" name="q3" value="0"> ทำไม่ได้
+      <p>2. แก้ปัญหาง่ายๆโดยใช้เครื่องมือด้วยตนเอง (FM) </p>
+      <label><input type="radio" name="q2" value="1"> ทำได้</label>
+      <label><input type="radio" name="q2" value="0"> ทำไม่ได้</label>
 
-    <p>4. พูดตอบรับและปฎิเสธได้ (EL) </p>
-    <input type="radio" name="q4" value="1"> ทำได้
-    <input type="radio" name="q4" value="0"> ทำไม่ได้
+      <p>3. ชี้อวัยวะ 7 ส่วน (RL) </p>
+      <label><input type="radio" name="q3" value="1"> ทำได้</label>
+      <label><input type="radio" name="q3" value="0"> ทำไม่ได้</label>
 
-    <p>5. ล้างและเช็ดมือได้เอง (PS) </p>
-    <input type="radio" name="q5" value="1"> ทำได้
-    <input type="radio" name="q5" value="0"> ทำไม่ได้
+      <p>4. พูดตอบรับและปฎิเสธได้ (EL) </p>
+      <label><input type="radio" name="q4" value="1"> ทำได้</label>
+      <label><input type="radio" name="q4" value="0"> ทำไม่ได้</label>
 
-    <br><br>
-    <button type="button" onclick="calculateResult()">ประเมินผล</button>
-  </form>
+      <p>5. ล้างและเช็ดมือได้เอง (PS) </p>
+      <label><input type="radio" name="q5" value="1"> ทำได้</label>
+      <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
 
-  <h3 id="result"></h3>
+      <button type="button" onclick="calculateResult()">ประเมินผล</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
 
   <script>
     function calculateResult() {
       let score = 0;
       for (let i = 1; i <= 5; i++) {
-        const val = document.querySelector('input[name="q' + i + '"]:checked');
-        if (val) score += parseInt(val.value);
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected) {
+          score += parseInt(selected.value);
+        }
       }
 
-      let result = "";
+      let resultText = "";
       if (score >= 4) {
-        result = "✅ พัฒนาการปกติ (ตรงกับปิงปองจราจรชีวิต7สี=สีขาว)";
+        resultText = '<span class="emoji">✅</span>พัฒนาการปกติ (สีขาว)';
       } else if (score == 3) {
-        result = "⚠️ เสี่ยงล่าช้า";
+        resultText = '<span class="emoji">⚠️</span>มีความเสี่ยงล่าช้า (สีเหลือง)';
       } else {
-        result = "❗ ควรส่งต่อผู้เชี่ยวชาญ";
+        resultText = '<span class="emoji">❗</span>ควรส่งต่อผู้เชี่ยวชาญ (สีแดง)';
       }
 
-      document.getElementById("result").innerText = result;
+      document.getElementById("result").innerHTML = resultText;
     }
   </script>
+
 </body>
 </html>
+
