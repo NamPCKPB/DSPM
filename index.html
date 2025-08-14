@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f9d976">
-
   <title>DSPM - เริ่มต้นการประเมิน</title>
 
-</head>
+  <!-- โหลดฟอนต์ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
-  <meta name="theme-color" content="#f9d976">
+  <!-- ไอคอนเว็บไซต์ -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
     body {
@@ -21,21 +24,21 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.8em;
+      font-size: 2.5em;
       color: #d35400;
       margin-bottom: 10px;
       text-shadow: 1px 1px 2px #fff;
     }
 
     p {
-      font-size: 1.3em;
+      font-size: 1.2em;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .btn-start {
@@ -49,6 +52,8 @@
       transition: background-color 0.3s ease;
       text-decoration: none;
       box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-top: 15px;
     }
 
     .btn-start:hover {
@@ -56,18 +61,33 @@
     }
 
     .logo {
-      max-width: 180px;
-      margin-bottom: 20px;
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .cartoon {
+      max-width: 280px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+      .btn-start { padding: 12px 24px; font-size: 1em; }
+      .cartoon { max-width: 200px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- โลโก้หรือลูกเล่นน่ารักๆ -->
-  <img src="logo.png" alt="DSPM Logo" class="logo"> <!-- ใส่ไฟล์ logo.png ถ้ามี -->
+  <!-- โลโก้ -->
+  <img src="logo.png" alt="DSPM Logo" class="logo">
 
   <h1>DSPM Online</h1>
   <p>ระบบประเมินพัฒนาการเด็ก 0-5 ปี<br>ตามเกณฑ์กรมอนามัย</p>
+
+  <!-- การ์ตูนน่ารัก -->
+  <img src="cartoon.png" alt="การ์ตูนน่ารัก" class="cartoon">
 
   <a href="select-age.html" class="btn-start">เริ่มต้นการประเมิน</a>
 
