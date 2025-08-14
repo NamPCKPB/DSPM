@@ -60,6 +60,24 @@
       background-color: #2980b9;
     }
 
+    .age-calculator {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="date"] {
+      padding: 8px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+
     @media (max-width: 500px) {
       ul {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -70,6 +88,14 @@
 <body>
   <div class="container">
     <h2>เลือกช่วงอายุที่ต้องการประเมิน</h2>
+
+    <!-- ช่องคำนวณอายุ -->
+    <div class="age-calculator">
+      <label for="birthdate">กรอกวันเกิด: </label>
+      <input type="date" id="birthdate">
+      <div class="result" id="ageResult"></div>
+    </div>
+
     <ul>
       <li><a href="form-แรกเกิด-1m.html">แรกเกิด-1 เดือน</a></li>
       <li><a href="form-1-2m.html">1-2 เดือน</a></li>
@@ -80,7 +106,7 @@
       <li><a href="form-10m-1y.html">10เดือน-1 ปี</a></li>
       <li><a href="form-1y1m-1y3m.html">1ปี1เดือน-1ปี3 เดือน</a></li>
       <li><a href="form-1y4m-1y5m.html">1ปี4เดือน-1ปี5 เดือน</a></li>
-      <li><a href="form-1y6m.html">1ปี6 เดิอน</a></li>
+      <li><a href="form-1y6m.html">1ปี6 เดือน</a></li>
       <li><a href="form-1y7mm-2y.html">1ปี7เดือน-2 ปี</a></li>
       <li><a href="form-2y1m-2y5m.html">2ปี1เดือน-2ปี5 เดือน</a></li>
       <li><a href="form-2y6m.html">2ปี6 เดือน</a></li>
@@ -92,5 +118,33 @@
       <li><a href="form-4y7mm-5y.html">4ปี7เดือน-5 ปี</a></li>
     </ul>
   </div>
+
+  <script>
+    document.getElementById('birthdate').addEventListener('change', function() {
+      const birthdate = new Date(this.value);
+      const today = new Date();
+
+      if (birthdate > today || isNaN(birthdate)) {
+        document.getElementById('ageResult').textContent = "กรุณากรอกวันเกิดที่ถูกต้อง";
+        return;
+      }
+
+      let years = today.getFullYear() - birthdate.getFullYear();
+      let months = today.getMonth() - birthdate.getMonth();
+      let days = today.getDate() - birthdate.getDate();
+
+      if (days < 0) {
+        months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      }
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      document.getElementById('ageResult').textContent = 
+        `อายุ: ${years} ปี ${months} เดือน`;
+    });
+  </script>
 </body>
 </html>
