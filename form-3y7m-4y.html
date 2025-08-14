@@ -114,28 +114,71 @@
   </div>
 
   <script>
-    function calculateResult() {
-      let score = 0;
-      for (let i = 1; i <= 6; i++) {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        if (selected) {
-          score += parseInt(selected.value);
-        }
-      }
+function calculateResult() {
+  // กำหนดหมวดหมู่ (GM มี 2 ข้อ)
+  const domains = {
+    GM: ['q1'],
+    FM: ['q2', 'q3'],
+    RL: ['q4'],
+    EL: ['q5'],
+    PS: ['q6'],
+  };
 
-      let resultText = "";
-      if (score >= 5) {
-        resultText = '<span class="emoji">✅</span>พัฒนาการปกติ (สีขาว)';
-      } else if (score == 4) {
-        resultText = '<span class="emoji">⚠️</span>มีความเสี่ยงล่าช้า (สีเหลือง)';
-      } else {
-        resultText = '<span class="emoji">❗</span>ควรส่งต่อผู้เชี่ยวชาญ (สีแดง)';
-      }
+  let failCount = 0; // นับจำนวนด้านที่ไม่ผ่าน
+  let unanswered = [];
 
-      document.getElementById("result").innerHTML = resultText;
+  for (let domain in domains) {
+    let answered = true;
+    let domainPass = true;
+
+    domains[domain].forEach(q => {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (!selected) {
+        answered = false;
+      } else if (selected.value === "0") {
+        domainPass = false; // ถ้าข้อใดข้อหนึ่งใน domain ทำไม่ได้ = ไม่ผ่าน
+      }
+    });
+
+    if (!answered) {
+      unanswered.push(domain);
+      continue;
     }
-  </script>
 
-</body>
-</html>
+    if (!domainPass) {
+      failCount++; // ไม่ผ่านด้านนี้
+    }
+  }
+
+  if (unanswered.length > 0) {
+    document.getElementById("result").innerHTML = 
+      "กรุณาตอบคำถามให้ครบทุกด้าน";
+    return;
+  }
+
+  // แปลงจำนวนด้านที่ไม่ผ่านเป็นปิงปองจราจรชีวิต 7 สี
+  let resultText = "";
+  switch (failCount) {
+    case 0:
+      resultText = '<span class="emoji">✅</span>พัฒนาการปกติ (ปิงปองจราจรชีวิต 7 สี คือ สีขาว)';
+      break;
+    case 1:
+      resultText = '<span class="emoji">⚠️</span>เริ่มมีพัฒนาการล่าช้า 1 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีเขียวอ่อน)';
+      break;
+    case 2:
+      resultText = '<span class="emoji">⚠️</span>พัฒนาการล่าช้า 2 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีเขียวเข้ม)';
+      break;
+    case 3:
+      resultText = '<span class="emoji">⚠️</span>พัฒนาการล่าช้า 3 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีเหลือง)';
+      break;
+    case 4:
+      resultText = '<span class="emoji">⚠️</span>พัฒนาการล่าช้า 4 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีส้ม)';
+      break;
+    default:
+      resultText = '<span class="emoji">❗</span>พัฒนาการล่าช้า 5 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีแดง)';
+  }
+
+  document.getElementById("result").innerHTML = resultText;
+}
+</script>
 

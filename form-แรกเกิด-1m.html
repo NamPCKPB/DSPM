@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>DSPM - อายุ 9 เดือน</title>
+  <title>DSPM - อายุแรกเกิด-1เดือน</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
   <style>
@@ -59,7 +59,7 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-
+    
     button:hover {
       background-color: #27ae60;
     }
@@ -68,7 +68,7 @@
       margin-top: 25px;
       font-size: 1.3em;
       font-weight: bold;
-      color: #c0392b;
+      color: black; /* แก้ให้เห็นชัด */
       text-align: center;
     }
 
@@ -99,7 +99,7 @@
       <label><input type="radio" name="q4" value="1"> ทำได้</label>
       <label><input type="radio" name="q4" value="0"> ทำไม่ได้</label>
 
-      <p>5. มองจ้องหน้าได้นาน1-2วินาที </p>
+      <p>5. มองจ้องหน้าได้นาน 1-2 วินาที (PS) </p>
       <label><input type="radio" name="q5" value="1"> ทำได้</label>
       <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
 
@@ -110,27 +110,70 @@
   </div>
 
   <script>
-    function calculateResult() {
-      let score = 0;
-      for (let i = 1; i <= 5; i++) {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        if (selected) {
-          score += parseInt(selected.value);
-        }
-      }
+function calculateResult() {
+  // กำหนดหมวดหมู่ (GM มี 2 ข้อ)
+  const domains = {
+    GM: ['q1'],
+    FM: ['q2'],
+    RL: ['q3'],
+    EL: ['q4'],
+    PS: ['q5'],
+  };
 
-      let resultText = "";
-      if (score >= 4) {
-        resultText = '<span class="emoji">✅</span>พัฒนาการปกติ (สีขาว)';
-      } else if (score == 3) {
-        resultText = '<span class="emoji">⚠️</span>มีความเสี่ยงล่าช้า (สีเหลือง)';
-      } else {
-        resultText = '<span class="emoji">❗</span>ควรส่งต่อผู้เชี่ยวชาญ (สีแดง)';
-      }
+  let failCount = 0; // นับจำนวนด้านที่ไม่ผ่าน
+  let unanswered = [];
 
-      document.getElementById("result").innerHTML = resultText;
+  for (let domain in domains) {
+    let answered = true;
+    let domainPass = true;
+
+    domains[domain].forEach(q => {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (!selected) {
+        answered = false;
+      } else if (selected.value === "0") {
+        domainPass = false; // ถ้าข้อใดข้อหนึ่งใน domain ทำไม่ได้ = ไม่ผ่าน
+      }
+    });
+
+    if (!answered) {
+      unanswered.push(domain);
+      continue;
     }
-  </script>
 
-</body>
-</html>
+    if (!domainPass) {
+      failCount++; // ไม่ผ่านด้านนี้
+    }
+  }
+
+  if (unanswered.length > 0) {
+    document.getElementById("result").innerHTML = 
+      "กรุณาตอบคำถามให้ครบทุกด้าน";
+    return;
+  }
+
+  // แปลงจำนวนด้านที่ไม่ผ่านเป็นปิงปองจราจรชีวิต 7 สี
+  let resultText = "";
+  switch (failCount) {
+    case 0:
+      resultText = '<span class="emoji">✅</span>พัฒนาการปกติ (ปิงปองจราจรชีวิต 7 สี คือ สีขาว)';
+      break;
+    case 1:
+      resultText = '<span class="emoji">⚠️</span>เริ่มมีพัฒนาการล่าช้า 1 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีเขียวอ่อน)';
+      break;
+    case 2:
+      resultText = '<span class="emoji">⚠️</span>พัฒนาการล่าช้า 2 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีเขียวเข้ม)';
+      break;
+    case 3:
+      resultText = '<span class="emoji">⚠️</span>พัฒนาการล่าช้า 3 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีเหลือง)';
+      break;
+    case 4:
+      resultText = '<span class="emoji">⚠️</span>พัฒนาการล่าช้า 4 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีส้ม)';
+      break;
+    default:
+      resultText = '<span class="emoji">❗</span>พัฒนาการล่าช้า 5 ด้าน (ปิงปองจราจรชีวิต 7 สี คือ สีแดง)';
+  }
+
+  document.getElementById("result").innerHTML = resultText;
+}
+</script>
