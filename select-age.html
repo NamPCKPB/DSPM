@@ -10,28 +10,33 @@
       font-family: 'Kanit', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #fdf6e3, #f7d794);
+      background: linear-gradient(180deg, #ffe8f0, #fef7d5, #e0f7fa);
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
 
     .container {
-      max-width: 600px;
-      width: 100%;
+      max-width: 700px;
+      width: 95%;
       padding: 30px 20px;
       background-color: #fff;
-      margin-top: 50px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 60px 0;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
     }
 
     h2 {
       text-align: center;
-      color: #d35400;
-      font-size: 1.8em;
+      color: #ff6f91;
+      font-size: 2em;
       margin-bottom: 25px;
+      text-shadow: 1px 1px 3px #fff;
     }
 
     ul {
@@ -48,16 +53,18 @@
 
     a {
       display: block;
-      background-color: #3498db;
+      background-color: #ffb6c1;
       color: white;
-      padding: 12px 10px;
-      border-radius: 8px;
+      padding: 14px 10px;
+      border-radius: 20px;
       text-decoration: none;
-      transition: background-color 0.2s;
+      transition: all 0.3s;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
     }
 
     a:hover {
-      background-color: #2980b9;
+      background-color: #ff8fab;
+      transform: scale(1.05);
     }
 
     .age-calculator {
@@ -68,7 +75,7 @@
     input[type="date"] {
       padding: 8px;
       font-size: 1em;
-      border-radius: 5px;
+      border-radius: 8px;
       border: 1px solid #ccc;
     }
 
@@ -78,14 +85,43 @@
       color: #27ae60;
     }
 
+    /* การ์ตูนลอย ๆ */
+    .decor {
+      position: absolute;
+      width: 70px;
+      opacity: 0.85;
+      z-index: 1;
+    }
+    .star { top: 5%; left: 10%; animation: float 6s infinite; }
+    .heart { top: 20%; right: 12%; animation: float 7s infinite; }
+    .bear { bottom: 10%; left: 5%; animation: float 8s infinite; }
+    .toy { bottom: 18%; right: 8%; animation: float 9s infinite; }
+    .milk { top: 45%; left: -20px; animation: float 10s infinite; }
+    .duck { bottom: 5%; right: 40%; animation: float 11s infinite; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
     @media (max-width: 500px) {
       ul {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       }
+      .decor { width: 50px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- การ์ตูนลอย -->
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="decor star" alt="star">
+  <img src="https://cdn-icons-png.flaticon.com/512/535/535234.png" class="decor heart" alt="heart">
+  <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" class="decor bear" alt="bear">
+  <img src="https://cdn-icons-png.flaticon.com/512/1687/1687670.png" class="decor toy" alt="toy">
+  <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" class="decor milk" alt="milk">
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="decor duck" alt="duck">
+
   <div class="container">
     <h2>เลือกช่วงอายุที่ต้องการประเมิน</h2>
 

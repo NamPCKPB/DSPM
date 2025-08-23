@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f9d976">
+  <meta name="theme-color" content="#ffd9e8">
   <title>DSPM - เริ่มต้นการประเมิน</title>
 
   <!-- โหลดฟอนต์ -->
@@ -19,57 +19,89 @@
       margin: 0;
       padding: 0;
       font-family: 'Kanit', sans-serif;
-      background: linear-gradient(to bottom, #fbeec1, #f9d976);
+      background: linear-gradient(180deg, #ffe8f0, #fef7d5, #e0f7fa);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     h1 {
-      font-size: 2.5em;
-      color: #d35400;
+      font-size: 2.8em;
+      color: #ff6f91;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 2px #fff;
+      text-shadow: 2px 2px 5px #fff;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #555;
       margin-bottom: 25px;
     }
 
     .btn-start {
-      background-color: #3498db;
+      background-color: #ffb6c1;
       color: white;
-      padding: 15px 30px;
+      padding: 15px 40px;
       font-size: 1.2em;
       border: none;
-      border-radius: 10px;
+      border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
       text-decoration: none;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
       display: inline-block;
-      margin-top: 15px;
+      animation: bounce 1.5s infinite;
     }
 
     .btn-start:hover {
-      background-color: #2980b9;
+      background-color: #ff8fab;
+      transform: scale(1.05);
+    }
+
+    /* แอนิเมชันเด้ง */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* การตกแต่งไอคอนน่ารักแบบลอย */
+    .decor {
+      position: absolute;
+      width: 60px;
+      opacity: 0.8;
+    }
+    .star { top: 10%; left: 15%; animation: float 6s infinite; }
+    .heart { top: 25%; right: 10%; animation: float 8s infinite; }
+    .bear { bottom: 10%; left: 8%; animation: float 7s infinite; }
+    .toy { bottom: 15%; right: 12%; animation: float 9s infinite; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
     }
 
     @media (max-width: 600px) {
       h1 { font-size: 2em; }
       p { font-size: 1em; }
-      .btn-start { padding: 12px 24px; font-size: 1em; }
+      .btn-start { padding: 12px 28px; font-size: 1em; }
+      .decor { width: 45px; }
     }
   </style>
 </head>
 <body>
 
-  <h1>DSPM Online</h1>
+  <!-- ไอคอนน่ารักลอยรอบ ๆ -->
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="decor star" alt="star">
+  <img src="https://cdn-icons-png.flaticon.com/512/535/535234.png" class="decor heart" alt="heart">
+  <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" class="decor bear" alt="bear">
+  <img src="https://cdn-icons-png.flaticon.com/512/1687/1687670.png" class="decor toy" alt="toy">
+
+  <h1>DSPM Online 🍼✨</h1>
   <p>ระบบประเมินพัฒนาการเด็ก 0-5 ปี<br>ตามเกณฑ์กรมอนามัย</p>
 
   <a href="select-age.html" class="btn-start">เริ่มต้นการประเมิน</a>
