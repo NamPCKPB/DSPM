@@ -15,171 +15,144 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
     }
 
     .container {
-      max-width: 700px;
+      max-width: 600px;
       width: 95%;
       padding: 30px 20px;
       background-color: #fff;
-      margin: 60px 0;
+      margin: 80px 0;
       border-radius: 20px;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 10;
+      text-align: center;
     }
 
     h2 {
-      text-align: center;
       color: #ff6f91;
       font-size: 2em;
       margin-bottom: 25px;
       text-shadow: 1px 1px 3px #fff;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
-    }
-
-    li {
-      text-align: center;
-    }
-
-    a {
-      display: block;
-      background-color: #ffb6c1;
-      color: white;
-      padding: 14px 10px;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-    }
-
-    a:hover {
-      background-color: #ff8fab;
-      transform: scale(1.05);
-    }
-
-    .age-calculator {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
     input[type="date"] {
-      padding: 8px;
-      font-size: 1em;
+      padding: 10px;
+      font-size: 1.1em;
       border-radius: 8px;
       border: 1px solid #ccc;
     }
 
     .result {
-      margin-top: 10px;
+      margin-top: 15px;
       font-weight: bold;
       color: #27ae60;
+      white-space: pre-line; /* ให้ขึ้นบรรทัดใหม่ */
     }
 
-    /* การ์ตูนลอย ๆ */
-    .decor {
-      position: absolute;
-      width: 70px;
-      opacity: 0.85;
-      z-index: 1;
-    }
-    .star { top: 5%; left: 10%; animation: float 6s infinite; }
-    .heart { top: 20%; right: 12%; animation: float 7s infinite; }
-    .bear { bottom: 10%; left: 5%; animation: float 8s infinite; }
-    .toy { bottom: 18%; right: 8%; animation: float 9s infinite; }
-    .milk { top: 45%; left: -20px; animation: float 10s infinite; }
-    .duck { bottom: 5%; right: 40%; animation: float 11s infinite; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+    .next-btn {
+      display: none;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #ff6f91;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    @media (max-width: 500px) {
-      ul {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      }
-      .decor { width: 50px; }
+    .next-btn:hover {
+      background: #ff3f6c;
     }
   </style>
 </head>
 <body>
-
-  <!-- การ์ตูนลอย -->
-  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="decor star" alt="star">
-  <img src="https://cdn-icons-png.flaticon.com/512/535/535234.png" class="decor heart" alt="heart">
-  <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" class="decor bear" alt="bear">
-  <img src="https://cdn-icons-png.flaticon.com/512/1687/1687670.png" class="decor toy" alt="toy">
-  <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" class="decor milk" alt="milk">
-  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="decor duck" alt="duck">
-
   <div class="container">
-    <h2>เลือกช่วงอายุที่ต้องการประเมิน</h2>
-
-    <!-- ช่องคำนวณอายุ -->
-    <div class="age-calculator">
-      <label for="birthdate">กรอกวันเกิด: </label>
-      <input type="date" id="birthdate">
-      <div class="result" id="ageResult"></div>
-    </div>
-
-    <ul>
-      <li><a href="form-แรกเกิด-1m.html">แรกเกิด-1 เดือน</a></li>
-      <li><a href="form-1-2m.html">1-2 เดือน</a></li>
-      <li><a href="form-3-4m.html">3-4 เดือน</a></li>
-      <li><a href="form-5-6m.html">5-6 เดือน</a></li>
-      <li><a href="form-7-8m.html">7-8 เดือน</a></li>
-      <li><a href="form-9m.html">9 เดือน</a></li>
-      <li><a href="form-10m-1y.html">10เดือน-1 ปี</a></li>
-      <li><a href="form-1y1m-1y3m.html">1ปี1เดือน-1ปี3 เดือน</a></li>
-      <li><a href="form-1y4m-1y5m.html">1ปี4เดือน-1ปี5 เดือน</a></li>
-      <li><a href="form-1y6m.html">1ปี6 เดือน</a></li>
-      <li><a href="form-1y7mm-2y.html">1ปี7เดือน-2 ปี</a></li>
-      <li><a href="form-2y1m-2y5m.html">2ปี1เดือน-2ปี5 เดือน</a></li>
-      <li><a href="form-2y6m.html">2ปี6 เดือน</a></li>
-      <li><a href="form-2y7m-3y.html">2ปี7เดือน-3 ปี</a></li>
-      <li><a href="form-3y1m-3y5m.html">3ปี1เดือน-3ปี5 เดือน</a></li>
-      <li><a href="form-3y6m.html">3ปี6 เดือน</a></li>
-      <li><a href="form-3y7m-4y.html">3ปี7เดือน-4 ปี</a></li>
-      <li><a href="form-4y1m-4y6m.html">4ปี1เดือน-4ปี6 เดือน</a></li>
-      <li><a href="form-4y7mm-5y.html">4ปี7เดือน-5 ปี</a></li>
-    </ul>
+    <h2>คำนวณอายุเด็ก</h2>
+    <label for="birthdate">กรอกวันเกิด: </label>
+    <input type="date" id="birthdate">
+    <div class="result" id="ageResult"></div>
+    <button class="next-btn" id="nextBtn">ไปยังแบบประเมิน</button>
   </div>
 
   <script>
+    const ageResult = document.getElementById('ageResult');
+    const nextBtn = document.getElementById('nextBtn');
+    let targetPage = "";
+
     document.getElementById('birthdate').addEventListener('change', function() {
       const birthdate = new Date(this.value);
       const today = new Date();
 
       if (birthdate > today || isNaN(birthdate)) {
-        document.getElementById('ageResult').textContent = "กรุณากรอกวันเกิดที่ถูกต้อง";
+        ageResult.textContent = "กรุณากรอกวันเกิดที่ถูกต้อง";
+        nextBtn.style.display = "none";
         return;
       }
 
+      // ปี พ.ศ.
+      const birthYearBE = birthdate.getFullYear() + 543;
+
+      // คำนวณอายุแบบปฏิทินจริง
       let years = today.getFullYear() - birthdate.getFullYear();
       let months = today.getMonth() - birthdate.getMonth();
       let days = today.getDate() - birthdate.getDate();
 
       if (days < 0) {
         months--;
-        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+        const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        days += prevMonth.getDate();
       }
       if (months < 0) {
         years--;
         months += 12;
       }
 
-      document.getElementById('ageResult').textContent = 
-        `อายุ: ${years} ปี ${months} เดือน`;
+      // แสดงผล
+      ageResult.textContent =
+        `วันเกิด: ${birthdate.getDate()}/${birthdate.getMonth()+1}/${birthYearBE} (พ.ศ.)
+อายุ: ${years} ปี ${months} เดือน ${days} วัน`;
+
+      // Mapping แบบเดือนจริง + วัน
+      const totalMonths = years * 12 + months;
+
+      if (totalMonths === 0 && days <= 30) targetPage = "form-แรกเกิด-1m.html";
+      else if (totalMonths === 1 && days <= 29) targetPage = "form-1-2m.html";
+      else if (totalMonths === 2 && days <= 30) targetPage = "form-1-2m.html";
+      else if (totalMonths === 3 && days <= 30) targetPage = "form-3-4m.html";
+      else if (totalMonths === 4 && days <= 29) targetPage = "form-3-4m.html";
+      else if (totalMonths === 5 && days <= 30) targetPage = "form-5-6m.html";
+      else if (totalMonths === 6 && days <= 29) targetPage = "form-5-6m.html";
+      else if (totalMonths === 7 && days <= 30) targetPage = "form-7-8m.html";
+      else if (totalMonths === 8 && days <= 29) targetPage = "form-7-8m.html";
+      else if (totalMonths === 9) targetPage = "form-9m.html";
+      else if (totalMonths === 10 || (totalMonths === 11 && days <= 29)) targetPage = "form-10m-1y.html";
+      else if ((totalMonths === 11 && days >= 30) || (totalMonths === 12 && days <= 2)) targetPage = "form-10m-1y.html";
+      else if (totalMonths === 12 || totalMonths === 13) targetPage = "form-1y1m-1y3m.html";
+      else if (totalMonths === 14 || totalMonths === 15) targetPage = "form-1y1m-1y3m.html";
+      else if (totalMonths === 16 || totalMonths === 17) targetPage = "form-1y4m-1y5m.html";
+      else if (totalMonths === 18) targetPage = "form-1y6m.html";
+      else if (totalMonths >= 19 && totalMonths <= 24) targetPage = "form-1y7mm-2y.html";
+      else if (totalMonths >= 25 && totalMonths <= 29) targetPage = "form-2y1m-2y5m.html";
+      else if (totalMonths === 30) targetPage = "form-2y6m.html";
+      else if (totalMonths >= 31 && totalMonths <= 36) targetPage = "form-2y7m-3y.html";
+      else if (totalMonths >= 37 && totalMonths <= 41) targetPage = "form-3y1m-3y5m.html";
+      else if (totalMonths === 42) targetPage = "form-3y6m.html";
+      else if (totalMonths >= 43 && totalMonths <= 48) targetPage = "form-3y7m-4y.html";
+      else if (totalMonths >= 49 && totalMonths <= 54) targetPage = "form-4y1m-4y6m.html";
+      else if (totalMonths >= 55 && totalMonths <= 60) targetPage = "form-4y7mm-5y.html";
+      else targetPage = "";
+
+      // โชว์ปุ่มถ้ามีไฟล์เป้าหมาย
+      nextBtn.style.display = targetPage ? "inline-block" : "none";
+    });
+
+    // ไปหน้าถัดไปเมื่อกดปุ่ม
+    nextBtn.addEventListener('click', function() {
+      if (targetPage) {
+        window.location.href = targetPage;
+      }
     });
   </script>
 </body>

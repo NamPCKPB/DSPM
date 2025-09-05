@@ -90,26 +90,34 @@
       margin-right: 5px;
     }
 
+     /* ทำให้หัวข้อข้อเสนอแนะเป็นสีแดง */
+    .advice-title {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* ทำให้รายละเอียดข้อเสนอแนะเป็นสีแดงด้วย */
+    .advice-text {
+      color: red;
+    }
+
     /* การ์ตูนตกแต่ง */
     .sticker {
       position: absolute;
       width: 60px;
     }
-    .sticker.topleft {
-      top: -20px;
-      left: -20px;
-    }
-    .sticker.topright {
-      top: -20px;
-      right: -20px;
-    }
-    .sticker.bottomleft {
-      bottom: -20px;
-      left: -20px;
-    }
-    .sticker.bottomright {
-      bottom: -20px;
-      right: -20px;
+    .sticker.topleft { top: -20px; left: -20px; }
+    .sticker.topright { top: -20px; right: -20px; }
+    .sticker.bottomleft { bottom: -20px; left: -20px; }
+    .sticker.bottomright { bottom: -20px; right: -20px; }
+
+    /* ตัวเลือก "ประเมินครั้งแรก/ซ้ำ" ให้ใหญ่ขึ้น */
+    .assessment-label {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #000000;
+      margin-left: 15px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -121,8 +129,14 @@
     <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker bottomleft">
     <img src="https://cdn-icons-png.flaticon.com/512/1864/1864508.png" class="sticker bottomright">
 
+
     <h2>แบบประเมินพัฒนาการ DSPM<br>อายุ4ปี7เดือน-5ปี</h2>
     <form id="dspmForm">
+
+      <p></p>
+      <label class="assessment-label"><input type="radio" name="assessment" value="ครั้งแรก"> ประเมินครั้งแรก</label>
+      <label class="assessment-label"><input type="radio" name="assessment" value="ซ้ำ"> ประเมินซ้ำ</label>
+
       <p>1. เดินต่อส้นเท้า (GM) </p>
       <label><input type="radio" name="q1" value="1"> ทำได้</label>
       <label><input type="radio" name="q1" value="0"> ทำไม่ได้</label>
@@ -142,6 +156,12 @@
       <p>5. เล่นเลียบแบบบทบาทของผู้ใหญ่ได้ (PS) </p>
       <label><input type="radio" name="q5" value="1"> ทำได้</label>
       <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
+
+       <hr>
+
+      <p> ความผิดปกติทางสมอง เช่น ดาวน์ซินโดรม ออทิสติก สมาธิสั้น ความบกพร่องทางสติปัญญา </p>
+      <label><input type="radio" name="brain" value="ไม่มี"> ไม่มี</label>
+      <label><input type="radio" name="brain" value="มี"> มี</label>
 
     <button type="button" onclick="calculateResult()">💡 ประเมินผล</button>
     </form>
