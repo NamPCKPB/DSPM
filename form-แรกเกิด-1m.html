@@ -5,85 +5,87 @@
   <title>DSPM - อายุแรกเกิด-1เดือน</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ฟอนต์น่ารัก -->
-  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Itim', cursive;
-      background: url("https://www.transparenttextures.com/patterns/food.png"),
-                  linear-gradient(to bottom, #ffe6f0, #ffd1a9);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
+  font-family: 'Sarabun', sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
 
-    .container {
-      background-color: #ffffffdd;
-      width: 95%;
-      max-width: 650px;
-      margin: 30px auto;
-      padding: 30px 25px;
-      border-radius: 25px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-      border: 4px dashed #ff9ec4;
-      position: relative;
-    }
+   .container {
+  background: #ffffff;
+  width: 95%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+}
 
     h2 {
-      text-align: center;
-      color: #ff6f91;
-      margin-bottom: 25px;
-      font-size: 1.8em;
-    }
+  text-align: center;
+  color: #0b5cab;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
 
     p {
-      font-weight: bold;
-      margin-top: 20px;
-      color: #333;
-      font-size: 1.1em;
-    }
+  font-weight: 600;
+  margin-top: 18px;
+  color: #222;
+  font-size: 1rem;
+}
 
     label {
-      display: block;
-      margin-left: 25px;
-      margin-bottom: 10px;
-      font-size: 1em;
-    }
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+  color: #333;
+}
 
     input[type="radio"] {
       margin-right: 8px;
     }
 
     button {
-      margin-top: 30px;
-      width: 100%;
-      background-color: #ff9ec4;
-      color: white;
-      border: none;
-      padding: 15px;
-      font-size: 1.2em;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.3s ease;
-    }
+  margin-top: 30px;
+  width: 100%;
+  background: #0b5cab;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-family: 'Sarabun', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-    button:hover {
-      background-color: #ff6f91;
-      transform: scale(1.05);
-    }
+button:hover {
+  background: #08498a;
+}
 
-    #result {
-      margin-top: 25px;
-      font-size: 1.15em;
-      font-weight: bold;
-      color: #444;
-      text-align: left;
-      line-height: 1.7;
-      padding: 15px;
-      background: #fff5f8;
-      border-radius: 12px;
-      border: 2px solid #ff9ec4;
-    }
+   #result {
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  text-align: left;
+  line-height: 1.8;
+  padding: 20px;
+  background: #f8fbff;
+  border-radius: 8px;
+  border: 1px solid #b7d4f5;
+}
 
     .emoji {
       font-size: 1.5em;
@@ -124,12 +126,14 @@
 <body>
 
   <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864514.png" class="sticker topleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker topright">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker bottomleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864508.png" class="sticker bottomright">
+   .sticker {
+  display: none;
+}
 
-    <h2>🍼 แบบประเมินพัฒนาการ DSPM<br>อายุแรกเกิด - 1 เดือน</h2>
+   <h2>
+แบบประเมินพัฒนาการเด็ก DSPM<br>
+ช่วงอายุแรกเกิด – 1 เดือน
+</h2>
     <form id="dspmForm">
 
       <p></p>
