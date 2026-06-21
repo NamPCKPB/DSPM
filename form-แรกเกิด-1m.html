@@ -9,89 +9,103 @@
   <style>
     body {
   font-family: 'Sarabun', sans-serif;
-  background: #f4f6f9;
+  background: linear-gradient(to bottom, #eef8ff, #dff4f2);
   margin: 0;
   padding: 20px;
   display: flex;
   justify-content: center;
 }
 
-   .container {
+.container {
   background: #ffffff;
   width: 95%;
   max-width: 800px;
   margin: 20px auto;
   padding: 35px;
-  border-radius: 12px;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  position: relative;
+  border-radius: 16px;
+  border: 2px solid #b9dff5;
+  box-shadow: 0 4px 12px rgba(0, 85, 150, 0.12);
 }
 
-    h2 {
+h2 {
   text-align: center;
-  color: #0b5cab;
+  color: #1565c0;
   margin-bottom: 25px;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
 }
 
-    p {
+p {
   font-weight: 600;
   margin-top: 18px;
-  color: #222;
+  color: #1f2937;
   font-size: 1rem;
 }
 
-    label {
+label {
   display: block;
   margin-left: 20px;
   margin-bottom: 8px;
-  font-size: 0.98rem;
-  color: #333;
+  font-size: 1rem;
+  color: #374151;
 }
 
-    input[type="radio"] {
-      margin-right: 8px;
-    }
+input[type="radio"] {
+  accent-color: #1976d2;
+  margin-right: 8px;
+}
 
-    button {
-  margin-top: 30px;
+button {
   width: 100%;
-  background: #0b5cab;
-  color: white;
-  border: none;
+  margin-top: 30px;
   padding: 14px;
-  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2196f3, #26a69a);
+  color: #ffffff;
   font-family: 'Sarabun', sans-serif;
-  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.2s;
 }
 
 button:hover {
-  background: #08498a;
+  transform: translateY(-1px);
+  opacity: 0.95;
 }
 
-   #result {
+#result {
   margin-top: 25px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #222;
-  text-align: left;
-  line-height: 1.8;
   padding: 20px;
-  background: #f8fbff;
-  border-radius: 8px;
-  border: 1px solid #b7d4f5;
+  border-radius: 12px;
+  background: #f8fdff;
+  border-left: 6px solid #29b6f6;
+  line-height: 1.8;
+  color: #222;
 }
 
-    .emoji {
-      font-size: 1.5em;
-      margin-right: 5px;
-    }
+hr {
+  border: none;
+  border-top: 1px solid #cfd8dc;
+  margin: 24px 0;
+}
 
+.assessment-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f4c81;
+}
+
+.advice-title {
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.advice-text {
+  color: #b71c1c;
+}
     /* ทำให้หัวข้อข้อเสนอแนะเป็นสีแดง */
     .advice-title {
       color: red;
@@ -126,7 +140,17 @@ button:hover {
 <body>
 
   <div class="container">
-  
+<div style="
+  background:#1976d2;
+  color:white;
+  padding:14px;
+  text-align:center;
+  border-radius:12px;
+  margin-bottom:20px;
+  font-size:1.1rem;
+  font-weight:700;">
+  กรมอนามัย • แบบประเมินพัฒนาการเด็ก DSPM (Developmental Surveillance and Promotion Manual)
+</div>
 
    <h2>
 แบบประเมินพัฒนาการเด็ก DSPM<br>
