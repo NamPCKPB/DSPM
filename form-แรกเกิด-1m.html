@@ -2,108 +2,95 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>DSPM - อายุแรกเกิด-1เดือน</title>
+  <title>>DSPM - อายุแรกเกิด-1เดือน</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ฟอนต์น่ารัก -->
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-body {
+    body {
   font-family: 'Sarabun', sans-serif;
-  background: linear-gradient(135deg, #ffe4ec, #fff0f5, #fde2ff);
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
+      background: url("https://www.transparenttextures.com/patterns/food.png"),
+                  linear-gradient(to bottom, #ffe6f0, #ffd1a9);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-.container {
-  background: #ffffff;
-  width: 95%;
-  max-width: 850px;
-  margin: 20px auto;
-  padding: 35px;
-  border-radius: 24px;
-  border: 3px solid #f8bbd0;
-  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.12);
-}
+    .container {
+      background-color: #ffffffdd;
+      width: 95%;
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 30px 25px;
+      border-radius: 25px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      border: 4px dashed #ff9ec4;
+      position: relative;
+    }
 
-h2 {
-  text-align: center;
-  color: #d81b60;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.5;
-}
+    h2 {
+      text-align: center;
+      color: #ff6f91;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+    }
 
-p {
-  font-weight: 600;
-  margin-top: 18px;
-  color: #1f2937;
-  font-size: 1rem;
-}
+    p {
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+      font-size: 1.1em;
+    }
 
-label {
-  display: block;
-  margin-left: 20px;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  color: #374151;
-}
+    label {
+      display: block;
+      margin-left: 25px;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
 
-input[type="radio"] {
-  accent-color: #ec407a;
-  margin-right: 8px;
-}
+    input[type="radio"] {
+      margin-right: 8px;
+    }
 
-button {
-  width: 100%;
-  margin-top: 30px;
-  padding: 15px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(to right, #f06292, #ec407a, #f48fb1);
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s;
-}
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: #ff9ec4;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.2em;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
 
-button:hover {
-  transform: scale(1.02);
-  opacity: 0.95;
-}
+    button:hover {
+      background-color: #ff6f91;
+      transform: scale(1.05);
+    }
 
-#result{
-  margin-top:25px;
-  padding:20px;
-  border-radius:18px;
-  background:#fff7fb;
-  border:2px solid #f8bbd0;
-  line-height:1.8;
-  font-size:16px;
-}
-hr {
-  border: none;
-  border-top: 1px solid #cfd8dc;
-  margin: 24px 0;
-}
+    #result {
+      margin-top: 25px;
+      font-size: 1.15em;
+      font-weight: bold;
+      color: #444;
+      text-align: left;
+      line-height: 1.7;
+      padding: 15px;
+      background: #fff5f8;
+      border-radius: 12px;
+      border: 2px solid #ff9ec4;
+    }
 
-.assessment-label {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #0f4c81;
-}
+    .emoji {
+      font-size: 1.5em;
+      margin-right: 5px;
+    }
 
-.advice-title {
-  color: #d32f2f;
-  font-weight: 700;
-}
-
-.advice-text {
-  color: #b71c1c;
-}
-    /* ทำให้หัวข้อข้อเสนอแนะเป็นสีแดง */
+     /* ทำให้หัวข้อข้อเสนอแนะเป็นสีแดง */
     .advice-title {
       color: red;
       font-weight: bold;
@@ -135,63 +122,115 @@ hr {
   </style>
 </head>
 <body>
-
-  <div class="container">
-<div style="
-background:linear-gradient(90deg,#f48fb1,#ec407a,#f8bbd0);
-padding:18px;
-border-radius:18px;
-text-align:center;
-color:white;
-margin-bottom:20px;
-box-shadow:0 3px 8px rgba(236,64,122,.2);">
-<div style="font-size:1.3rem;font-weight:bold;">
-แบบประเมินพัฒนาการเด็ก DSPM
-</div>
-
-<div style="margin-top:5px;font-size:0.95rem;">
-Developmental Surveillance and Promotion Manual
-</div>
-
-</div>
-
-   <h2>
+<div class="container">
+ <h2>
 แบบประเมินพัฒนาการเด็ก DSPM<br>
 ช่วงอายุแรกเกิด – 1 เดือน
 </h2>
     <form id="dspmForm">
-
       <p></p>
       <label class="assessment-label"><input type="radio" name="assessment" value="ครั้งแรก"> ประเมินครั้งแรก</label>
       <label class="assessment-label"><input type="radio" name="assessment" value="ซ้ำ"> ประเมินซ้ำ</label>
 
-      <p>1. ท่านอนคว่ำยกศีรษะและหันไปข้างใดข้างหนึ่งได้ (GM)</p>
-      <label><input type="radio" name="q1" value="1"> ทำได้</label>
-      <label><input type="radio" name="q1" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+  <strong>1. ท่านอนคว่ำยกศีรษะและหันไปข้างใดข้างหนึ่งได้ (GM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+  <strong>วิธีประเมิน :</strong>
+  จัดให้เด็กอยู่ในท่านอนคว่ำบนเบาะนอนแขนทั้งสองข้างอยู่หน้าไหล่ สังเกตเด็กยกศีรษะ
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+  <strong>ผ่าน :</strong>
+  เด็กสามารถยกศีรษะและหันไปข้างใดข้างหนึ่งได้
+</div>
+<label style="margin-bottom: 1.6px;">
+  <input type="radio" name="q1" value="1"> ทำได้
+</label>
+<label>
+  <input type="radio" name="q1" value="0"> ทำไม่ได้
+</label>
 
-      <p>2. มองตามผ่านกึ่งกลางลำตัว (FM)</p>
-      <label><input type="radio" name="q2" value="1"> ทำได้</label>
-      <label><input type="radio" name="q2" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+  <strong>2. มองตามผ่านกึ่งกลางลำตัว (FM)  </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+  <strong>วิธีประเมิน :</strong>
+    จัดให้เด็กอยู่ในท่านอนหงาย ถือลูกบอลผ้าสีแดงห่างจากหน้าเด็กประมาณ 20 ซม.ขยับลูกบอลผ้าสีแดงเพื่อกระตุ้นให้เด็กสนใจ แล้วเคลื่อนลูกบอลผ้าสีแดงช้า ๆ ไปทางด้านข้างลำตัวเด็กข้างใดข้างหนึ่งเคลื่อนลูกบอลผ้าสีแดงกลับมาที่จุดกึ่งกลางลำตัวเด็ก
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+  <strong>ผ่าน :</strong>
+เด็กมองตามลูกบอลผ้าสีแดง จากด้านข้างถึงระยะกึ่งกลางลำตัวได้
+</div>
+<label style="margin-bottom: 1.6px;">
+  <input type="radio" name="q2" value="1"> ทำได้
+</label>
+<label>
+  <input type="radio" name="q2" value="0"> ทำไม่ได้
+</label>
 
-      <p>3. สะดุ้งหรือเคลื่อนไหวร่างกายเมื่อได้ยินเสียงพูดระดับปกติ (RL)</p>
-      <label><input type="radio" name="q3" value="1"> ทำได้</label>
-      <label><input type="radio" name="q3" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+  <strong> 3. สะดุ้งหรือเคลื่อนไหวร่างกายเมื่อได้ยินเสียงพูดระดับปกติ (RL)  </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+  <strong>วิธีประเมิน :</strong>
+    <ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+    <li>จัดให้เด็กอยู่ในท่านอนหงาย</li>
+    <li>อยู่ห่างจากเด็กประมาณ 60 ซม.เรียกชื่อเด็กจากด้านข้างทีละข้างทั้งซ้ายและขวา โดยพูดเสียงดังปกติ</li>
+  </ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+  <strong>ผ่าน :</strong>
+  เด็กแสดงการรับรู้ด้วยการกะพริบตา สะดุ้ง หรือเคลื่อนไหวร่างกาย
+</div>
+<label style="margin-bottom: 1.6px;">
+  <input type="radio" name="q3" value="1"> ทำได้
+</label>
+<label>
+  <input type="radio" name="q3" value="0"> ทำไม่ได้
+</label>
 
-      <p>4. ส่งเสียงอ้อแอ้ (EL)</p>
-      <label><input type="radio" name="q4" value="1"> ทำได้</label>
-      <label><input type="radio" name="q4" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+  <strong> 4. ส่งเสียงอ้อแอ้ (EL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+  <strong>วิธีประเมิน :</strong>
+สังเกตว่าเด็กส่งเสียงอ้อแอ้ในระหว่างทำการประเมิน หรือถามจากพ่อแม่ผู้ปกครอง
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+  <strong>ผ่าน :</strong>
+  เด็กทำเสียงอ้อแอ้ได้
+</div>
+<label style="margin-bottom: 1.6px;">
+  <input type="radio" name="q4" value="1"> ทำได้
+</label>
+<label>
+  <input type="radio" name="q4" value="0"> ทำไม่ได้
+</label>
 
-      <p>5. มองจ้องหน้าได้นาน 1-2 วินาที (PS)</p>
-      <label><input type="radio" name="q5" value="1"> ทำได้</label>
-      <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
-
-      <hr>
+<div style="margin-bottom: 1.6px;">
+  <strong> 5. มองจ้องหน้าได้นาน 1-2 วินาที (PS) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+  <strong>วิธีประเมิน :</strong>
+อุ้มเด็กให้ห่างจากหน้าพ่อแม่ ผู้ปกครองหรือผู้ประเมินประมาณ 30 ซม. ยิ้มและพูดคุยกับเด็ก
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+  <strong>ผ่าน :</strong>
+  เด็กสามารถมองจ้องหน้าได้อย่างน้อย 1 วินาที
+</div>
+<label style="margin-bottom: 1.6px;">
+  <input type="radio" name="q5" value="1"> ทำได้
+</label>
+<label>
+  <input type="radio" name="q5" value="0"> ทำไม่ได้
+</label>
+<hr>
 
       <p> ความผิดปกติทางสมอง เช่น ดาวน์ซินโดรม ออทิสติก สมาธิสั้น ความบกพร่องทางสติปัญญา </p>
       <label><input type="radio" name="brain" value="ไม่มี"> ไม่มี</label>
       <label><input type="radio" name="brain" value="มี"> มี</label>
 
-      <button type="button" onclick="calculateResult()">💡 ประเมินผล</button>
+  <button type="button" onclick="calculateResult()">💡 ประเมินผล</button>
     </form>
 
     <div id="result"></div>
