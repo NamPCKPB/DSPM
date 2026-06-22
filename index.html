@@ -81,24 +81,6 @@
       50% { transform: translateY(-8px); }
     }
 
-    /* การ์ตูนลอย 4 มุม */
-    .decor {
-      position: absolute;
-      width: 70px;
-      opacity: 0.8;
-      z-index: 1;
-    }
-
-    .top-left { top: 5%; left: 5%; animation: float 6s infinite; }
-    .top-right { top: 5%; right: 5%; animation: float 7s infinite; }
-    .bottom-left { bottom: 5%; left: 5%; animation: float 8s infinite; }
-    .bottom-right { bottom: 5%; right: 5%; animation: float 9s infinite; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-12px); }
-    }
-
     @media (max-width: 600px) {
       h1 { font-size: 2em; }
       p { font-size: 1em; }
@@ -109,12 +91,6 @@
   </style>
 </head>
 <body>
-
-  <!-- การ์ตูนลอยมุม -->
-  <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" class="decor top-left" alt="bear">
-  <img src="https://cdn-icons-png.flaticon.com/512/1687/1687670.png" class="decor top-right" alt="toy">
-  <img src="https://cdn-icons-png.flaticon.com/512/3082/3082031.png" class="decor bottom-left" alt="ball">
-  <img src="https://cdn-icons-png.flaticon.com/512/4151/4151487.png" class="decor bottom-right" alt="rattle">
 
   <h1>DSPM Online</h1>
   <h1>(Developmental Surveillance and Promotion Manual)</h1>
