@@ -5,10 +5,10 @@
   <title>DSPM - อายุ2ปี7เดือน-3ปี</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ฟอนต์น่ารัก -->
-  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Itim', cursive;
+      font-family: 'Sarabun', sans-serif;
       background: url("https://www.transparenttextures.com/patterns/food.png"),
                   linear-gradient(to bottom, #ffe6f0, #ffd1a9);
       margin: 0;
@@ -101,7 +101,7 @@
       color: red;
     }
 
-    /* การ์ตูนตกแต่ง */
+     /* การ์ตูนตกแต่ง */
     .sticker {
       position: absolute;
       width: 60px;
@@ -119,42 +119,132 @@
       margin-left: 15px;
       margin-bottom: 15px;
     }
-  </style>
+
+ </style>
 </head>
 <body>
-
-  <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864514.png" class="sticker topleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker topright">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker bottomleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864508.png" class="sticker bottomright">
-
-    <h2>แบบประเมินพัฒนาการ DSPM<br>อายุ2ปี7เดือน-3ปี</h2>
+<div class="container">
+<h2>
+แบบประเมินพัฒนาการเด็ก DSPM<br>
+ช่วงอายุ2ปี7เดือน-3ปี
+</h2>
+<form id="dspmForm">
+<p></p>
+    <h2>แบบประเมินพัฒนาการ DSPM<br> อายุ2ปี7เดือน-3ปี </h2>
     <form id="dspmForm">
 
-      <p></p>
+       <p></p>
       <label class="assessment-label"><input type="radio" name="assessment" value="ครั้งแรก"> ประเมินครั้งแรก</label>
       <label class="assessment-label"><input type="radio" name="assessment" value="ซ้ำ"> ประเมินซ้ำ</label>
 
-      <p>1. ยืนขาข้างเดียว 1 วินาที (GM) </p>
-      <label><input type="radio" name="q1" value="1"> ทำได้</label>
-      <label><input type="radio" name="q1" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>1. ยืนขาข้างเดียว 1 วินาที (GM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> แสดงวิธียืนขาเดียวให้เด็กดู แล้วบอกให้เด็กยืนขาเดียวให้นานที่สุดเท่าที่จะนานได้ให้โอกาสประเมิน 3 ครั้ง (อาจเปลี่ยนขาได้)</li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กยืนขาเดียวได้นาน 1 วินาทีอย่างน้อย 1 ใน 3 ครั้ง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q1" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q1" value="0"> ทำไม่ได้
+</label>
 
-      <p>2. เลียนแบบลากเส้นเป็นวงต่อเนื่องกัน (FM) </p>
-      <label><input type="radio" name="q2" value="1"> ทำได้</label>
-      <label><input type="radio" name="q2" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>2. เลียนแบบลากเส้นเป็นวงต่อเนื่องกัน (FM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> ลากเส้นเป็นวงต่อเนื่องให้เด็กดูพร้อมกับพูดว่า "ลากเส้นเป็นวง"</li>
+<li> ยื่นดินสอและกระดาษ แล้วบอกให้เด็กทำตาม </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กสามารถลากเส้นเป็นวงต่อเนื่องกันได้ ตัวอย่าง เส้นวงต่อเนื่อง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q2" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q2" value="0"> ทำไม่ได้
+</label>
+      
+<div style="margin-bottom: 1.6px;">
+<strong>3. นำวัตถุ 2 ชนิด ในห้องมาให้ได้ตามคำสั่ง *หมายเหตุ หากคำสั่งแรกไม่ผ่านอาจให้เด็กหยิบวัตถุชนิดอื่น แต่ให้ทดสอบซ้ำ 3 ครั้ง ในวัตถุชนิดนั้น (RL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> นำวัตถุทั้ง 6 ชนิด วางไว้ในที่ต่าง ๆ ในห้องโดยให้อยู่ห่างจากตัวเด็กประมาณ 3 เมตร </li>
+<li> บอกให้เด็กหยิบวัตถุ2 ชนิด เช่น แปรงสีฟันและหวีมาให้ (ครั้งที่ 1) </li>
+<li> นำวัตถุทั้ง 2 ชนิด กลับไปวางไว้ในตำแหน่งใหม่ </li>
+<li> ทำซ้ำในข้อ 2 และ 3 อีก 2 ครั้ง </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #94234c;">
+<strong>หมายเหตุ :</strong>
+    หากคำสั่งแรกไม่ผ่านอาจให้เด็กหยิบวัตถุชนิดอื่น แต่ให้ทดสอบช้ำ 3 ครั้ง ในวัตถุชนิดนั้น
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กสามารถนำวัตถุ 2 ชนิดมาให้ได้ถูกต้องอย่างน้อย 2 ใน 3 ครั้ง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q3" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q3" value="0"> ทำไม่ได้
+</label>
+      
+<div style="margin-bottom: 1.6px;">
+<strong>4. พูดติดต่อกัน 3-4 คำได้ อย่างน้อย 4 ความหมาย (EL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> สังเกตหรือถามจากพ่อแม่ ผู้ปกครอง หรือผู้ดูแลเด็กว่าเด็กสามารถพูด 3 - 4 คำ (ไม่ใช่ 3 - 4 พยางค์) ต่อกันได้หรือไม่ เช่น บอกการให้ บอกความต้องการ บอกปฏิเสธ แสดงความคิดเห็น </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กพูดประโยคหรือวลีที่เป็นคำ3 - 4 คำอย่างน้อย 4 ความหมาย
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q4" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q4" value="0"> ทำไม่ได้
+</label>
 
-      <p>3. นำวัตถุ 2 ชนิด ในห้องมาให้ได้ตามคำสั่ง *หมายเหตุ หากคำสั่งแรกไม่ผ่านอาจให้เด็กหยิบวัตถุชนิดอื่น แต่ให้ทดสอบซ้ำ 3 ครั้ง ในวัตถุชนิดนั้น (RL) </p>
-      <label><input type="radio" name="q3" value="1"> ทำได้</label>
-      <label><input type="radio" name="q3" value="0"> ทำไม่ได้</label>
-
-      <p>4. พูดติดต่อกัน 3-4 คำได้ อย่างน้อย 4 ความหมาย (EL) </p>
-      <label><input type="radio" name="q4" value="1"> ทำได้</label>
-      <label><input type="radio" name="q4" value="0"> ทำไม่ได้</label>
-
-      <p>5. ใส่กางเกงได้เอง (PS) </p>
-      <label><input type="radio" name="q5" value="1"> ทำได้</label>
-      <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>5. ใส่กางเกงได้เอง (PS) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> ถามจากพ่อแม่ ผู้ปกครองหรือผู้ดูแลเด็กว่า ”เด็กสามารถใส่กางเกงเอวยางยืดได้เองหรือไม่“ </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กใส่กางเกงเอวยางยืดได้เองโดยไม่ต้องช่วย และไม่จำเป็นต้องถูกด้าน
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q4" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q4" value="0"> ทำไม่ได้
+</label>
 
        <hr>
 
