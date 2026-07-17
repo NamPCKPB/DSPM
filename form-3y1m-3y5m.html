@@ -5,10 +5,10 @@
   <title>DSPM - อายุ3ปี1เดือน-3ปี5เดือน</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ฟอนต์น่ารัก -->
-  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Itim', cursive;
+      font-family: 'Sarabun', sans-serif;
       background: url("https://www.transparenttextures.com/patterns/food.png"),
                   linear-gradient(to bottom, #ffe6f0, #ffd1a9);
       margin: 0;
@@ -101,7 +101,7 @@
       color: red;
     }
 
-    /* การ์ตูนตกแต่ง */
+     /* การ์ตูนตกแต่ง */
     .sticker {
       position: absolute;
       width: 60px;
@@ -119,48 +119,146 @@
       margin-left: 15px;
       margin-bottom: 15px;
     }
+
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864514.png" class="sticker topleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker topright">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker bottomleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864508.png" class="sticker bottomright">
-
-
-    <h2>แบบประเมินพัฒนาการ DSPM<br>อายุ3ปี1เดือน-3ปี5เดือน</h2>
+<div class="container">
+<h2>
+แบบประเมินพัฒนาการเด็ก DSPM<br>
+ช่วงอายุ3ปี1เดือน-3ปี5เดือน
+</h2>
+<form id="dspmForm">
+<p></p>
+    <h2>แบบประเมินพัฒนาการ DSPM<br> อายุ3ปี1เดือน-3ปี5เดือน </h2>
     <form id="dspmForm">
 
-      <p></p>
+       <p></p>
       <label class="assessment-label"><input type="radio" name="assessment" value="ครั้งแรก"> ประเมินครั้งแรก</label>
       <label class="assessment-label"><input type="radio" name="assessment" value="ซ้ำ"> ประเมินซ้ำ</label>
 
-      <p>1. ยืนขาเดียว 3 วินาที (GM) </p>
-      <label><input type="radio" name="q1" value="1"> ทำได้</label>
-      <label><input type="radio" name="q1" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>1. ยืนขาเดียว 3 วินาที (GM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> แสดงวิธียืนขาเดียวให้เด็กดู แล้วบอกให้เด็กยืนขาเดียวให้นานที่สุดเท่าที่จะนานได้ ให้โอกาสประเมิน 3 ครั้ง (อาจเปลี่ยนขาได้) </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กยืนขาเดียวได้นาน 3 วินาที อย่างน้อย 1 ใน 3 ครั้ง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q1" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q1" value="0"> ทำไม่ได้
+</label>
 
-      <p>2. เลียนแบบวาดรูปวงกลม (FM) </p>
-      <label><input type="radio" name="q2" value="1"> ทำได้</label>
-      <label><input type="radio" name="q2" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>2. เลียนแบบวาดรูปวงกลม (FM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li>  วาดรูปวงกลมขนาดเส้นผ่านศูนย์กลางประมาณ 5 ชม. ให้เด็กดูและพูดว่า"ครูวาดรูปวงกลม" และให้เด็กทำตาม </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+     เด็กสามารถวาดรูปวงกลมโดยไม่มีเหลี่ยม ไม่เว้า และเส้นที่มาเชื่อมต่อซ้อนกันไม่เกิน 2 ชม. ได้อย่างน้อย 1 ใน 3 ครั้ง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q2" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q2" value="0"> ทำไม่ได้
+</label>
 
-      <p>3. ทำตามคำสั่งต่อเนื่องไได้ 2 กริยากับวัตถุ 2 ชนิด (RL) </p>
-      <label><input type="radio" name="q3" value="1"> ทำได้</label>
-      <label><input type="radio" name="q3" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>3. ทำตามคำสั่งต่อเนื่องได้ 2 กริยากับวัตถุ 2 ชนิด (RL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> วางวัตถุ 4 ชนิด ตรงหน้าเด็กในระยะที่เด็กหยิบได้แล้วพูดกับเด็ก เช่น “หยิบหวีให้ครูแล้วชี้ตุ๊กตาซิ” </li>
+<li> วางสลับวัตถุทั้ง 4 ชนิดใหม่ </li>
+<li> กรณีที่เด็กไม่ผ่านคำสั่งแรกให้เปลี่ยนเป็นคำสั่งอื่นได้อีก 2 คำสั่ง โดยอาจเปลี่ยนกริยาหรือวัตถุได้ </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+     เด็กสามารถทำตามคำสั่งต่อเนื่องได้อย่างน้อย 1 ใน 3 ครั้ง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q3" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q3" value="0"> ทำไม่ได้
+</label>
 
-      <p>4. ถามคำถามได้ 4 แบบ เช่น ใคร อะไร ที่ไหน ทำไม (EL) </p>
-      <label><input type="radio" name="q4" value="1"> ทำได้</label>
-      <label><input type="radio" name="q4" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>4. ถามคำถามได้ 4 แบบ เช่น ใคร อะไร ที่ไหน ทำไม (EL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> สังเกตขณะเด็กเล่นของเล่นหรือประเมินทักษะอื่น </li>
+<li> ถามจากพ่อแม่ ผู้ปกครองหรือผู้ดูแลเด็กว่า เด็กเคยถามคำถาม "ใคร" "อะไร" "ที่ไหน" "ทำไม" หรือไม่ </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+     เด็กสามารถใช้คำถาม ถามต่างกัน 4 แบบ
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q4" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q4" value="0"> ทำไม่ได้
+</label>
 
-      <p>5. ทำตามกฎในการเล่นเป็นกลุ่มได้โดยมีผู้ใหญ่แนะนำ (PS) </p>
-      <label><input type="radio" name="q5" value="1"> ทำได้</label>
-      <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>5.ทำตามกฎในการเล่นเป็นกลุ่มได้โดยมีผู้ใหญ่แนะนำ (PS) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> ถามจากพ่อแม่ ผู้ปกครองหรือผู้ดูแลเด็กว่าเด็กสามารถเล่นด้วยกันเป็นกลุ่มเล็ก ๆได้หรือไม่ </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+      เด็กสามารถเล่นในกลุ่มตามกฎกติกาโดยไม่ต้องแนะนำเป็นรายบุคคล
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q5" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q5" value="0"> ทำไม่ได้
+</label>
 
-      <p>6. ช่วยทำงานขั้นตอนเดียวได้เอง (PS) </p>
-      <label><input type="radio" name="q6" value="1"> ทำได้</label>
-      <label><input type="radio" name="q6" value="0"> ทำไม่ได้</label>
-
+<div style="margin-bottom: 1.6px;">
+<strong>6. ช่วยทำงานขั้นตอนเดียวได้เอง (PS) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li> ถามจากพ่อแม่ ผู้ปกครองหรือผู้ดูแลเด็กว่า "เด็กสามารถช่วยทำงานง่าย ๆ เช่นยกของ เก็บของ ได้เอง โดยผู้ใหญ่ไม่ต้องช่วยได้หรือไม่" </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+      เด็กสามารถช่วยทำงานขั้นตอนเดียวได้เอง
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q6" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q6" value="0"> ทำไม่ได้
+</label>
        <hr>
 
       <p> ความผิดปกติทางสมอง เช่น ดาวน์ซินโดรม ออทิสติก สมาธิสั้น ความบกพร่องทางสติปัญญา </p>
