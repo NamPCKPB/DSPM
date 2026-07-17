@@ -5,10 +5,10 @@
   <title>DSPM - อายุ1ปี4เดือน-1ปี5เดือน</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ฟอนต์น่ารัก -->
-  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Itim', cursive;
+      font-family: 'Sarabun', sans-serif;
       background: url("https://www.transparenttextures.com/patterns/food.png"),
                   linear-gradient(to bottom, #ffe6f0, #ffd1a9);
       margin: 0;
@@ -101,7 +101,7 @@
       color: red;
     }
 
-    /* การ์ตูนตกแต่ง */
+     /* การ์ตูนตกแต่ง */
     .sticker {
       position: absolute;
       width: 60px;
@@ -122,41 +122,125 @@
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864514.png" class="sticker topleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker topright">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker bottomleft">
-    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864508.png" class="sticker bottomright">
-
-
+<div class="container">
+<h2>
+แบบประเมินพัฒนาการเด็ก DSPM<br>
+ช่วงอายุ1ปี4เดือน-1ปี5เดือน
+</h2>
+<form id="dspmForm">
+<p></p>
     <h2>แบบประเมินพัฒนาการ DSPM<br>อายุ1ปี4เดือน-1ปี5เดือน</h2>
     <form id="dspmForm">
 
-      <p></p>
+       <p></p>
       <label class="assessment-label"><input type="radio" name="assessment" value="ครั้งแรก"> ประเมินครั้งแรก</label>
       <label class="assessment-label"><input type="radio" name="assessment" value="ซ้ำ"> ประเมินซ้ำ</label>
 
-      <p>1. เดินลากของเล่นหรือสิ่งของได้ (GM) </p>
-      <label><input type="radio" name="q1" value="1"> ทำได้</label>
-      <label><input type="radio" name="q1" value="0"> ทำไม่ได้</label>
+<div style="margin-bottom: 1.6px;">
+<strong>1. เดินลากของเล่นหรือสิ่งของได้ (GM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li>เดินลากของเล่นให้เด็กดู</li>
+<li>ส่งเชือกลากของเล่นให้เด็ก และบอกให้เด็กเดินลากของเล่นไปเอง</li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+   เด็กเดินลากรถของเล่นหรือสิ่งของได้ไกล 2 เมตรโดยอาจเดินไปข้างหน้าหรือเดินถอยหลังก็ได้ พร้อมกับลากของเล่นไปโดยของเล่นอาจคว่ำได้
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q1" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q1" value="0"> ทำไม่ได้
+</label>
+ 
+<div style="margin-bottom: 1.6px;">
+<strong>2. ขีดเขียนได้เอง (FM) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li>เดินลากของเล่นให้เด็กดู</li>
+<li>ส่งเชือกลากของเล่นให้เด็ก และบอกให้เด็กเดินลากของเล่นไปเอง</li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #94234c;">
+<strong>หมายเหตุ :</strong>
+     ถ้าเด็กเพียงแต่เขียนจุด ๆ หรือกระแทก ดินสอกับกระดาษให้ถือว่าไม่ผ่าน
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+   เด็กเดินลากรถของเล่นหรือสิ่งของได้ไกล 2 เมตรโดยอาจเดินไปข้างหน้าหรือเดินถอยหลังก็ได้ พร้อมกับลากของเล่นไปโดยของเล่นอาจคว่ำได้
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q2" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q2" value="0"> ทำไม่ได้
+</label>
 
-      <p>2. ขีดเขียนได้เอง  *หมายเหตุ ถ้าเด็กเพียงแต่เขียนจุด ๆ หรือกระแทก ดินสอกับกระดาษให้ถือว่าไม่ผ่าน (FM)</p>
-      <label><input type="radio" name="q2" value="1"> ทำได้</label>
-      <label><input type="radio" name="q2" value="0"> ทำไม่ได้</label>
+  <div style="margin-bottom: 1.6px;">
+<strong>3. ทำตามคำสั่งได้ง่ายโดยไม่มีท่าทางประกอบ (RL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li>วางของเล่นทุกชิ้นแล้วเล่นกับเด็ก</li>
+<li>มองหน้าเด็กแล้วบอกเด็ก เช่น "กอดตุ๊กตาชิ" "ขว้างลูกบอลซิ" "ส่งรถให้ครูซิ" </li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+   เด็กสามารถแสดงกริยากับสิ่งของได้อย่างน้อย 1 คำสั่งโดยผู้ประเมินไม่ต้องแสดงท่าทางประกอบ
+</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q3" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q3" value="0"> ทำไม่ได้
+</label>   
 
-      <p>3. ทำตามคำสั่งได้ง่ายโดยไม่มีท่าทางประกอบ (RL) </p>
-      <label><input type="radio" name="q3" value="1"> ทำได้</label>
-      <label><input type="radio" name="q3" value="0"> ทำไม่ได้</label>
-
-      <p>4. ตอบชื่อวัตถุได้ถูกต้อง (EL) </p>
-      <label><input type="radio" name="q4" value="1"> ทำได้</label>
-      <label><input type="radio" name="q4" value="0"> ทำไม่ได้</label>
-
-      <p>5. เล่นการใช้สิ่งของตามหน้าที่ได้มากขึ้นด้วยความสัมพันธ์ของ 2 สิ่งขึ้นไป (PS) </p>
-      <label><input type="radio" name="q5" value="1"> ทำได้</label>
-      <label><input type="radio" name="q5" value="0"> ทำไม่ได้</label>
-
+<div style="margin-bottom: 1.6px;">
+<strong>4. ตอบชื่อวัตถุได้ถูกต้อง (EL) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li>ชี้ไปที่ของเล่นที่เด็กคุ้นเคยแล้วถามว่า"นี่อะไร"</li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+   เด็กสามารถตอบชื่อวัตถุได้ถูกต้องหรือออกเสียงได้ใกล้เคียง เช่น ตุ๊กตา - ตาได้ 1 ชนิด</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q4" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q4" value="0"> ทำไม่ได้
+</label> 
+      
+<div style="margin-bottom: 1.6px;">
+<strong>5. เล่นการใช้สิ่งของตามหน้าที่ได้มากขึ้นด้วยความสัมพันธ์ของ 2 สิ่งขึ้นไป (PS) </strong>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #1976d2;">
+<strong>วิธีประเมิน :</strong>
+<ol style="color: #1976d2; margin-top: 5px; margin-bottom: 5px;">
+<li>ยื่นของเล่นทั้งหมดให้เด็ก และสังเกตลักษณะการเล่นของเด็ก</li>
+</ol>
+</div>
+<div style="margin-left: 1.6px; margin-bottom: 1px; line-height: 1.6; color: #2e7d32;">
+<strong>ผ่าน :</strong>
+    เด็กสามารถเล่นการใช้สิ่งของตามหน้าที่ เช่น ใช้ช้อนตักในถ้วย หรือใช้หวีหวีผมให้ตุ๊กตา โดยเด็กเล่นได้อย่างน้อย3 ชนิด</div>
+<label style="margin-bottom: 1.6px;">
+<input type="radio" name="q5" value="1"> ทำได้
+</label>
+<label>
+<input type="radio" name="q5" value="0"> ทำไม่ได้
+</label> 
        <hr>
 
       <p> ความผิดปกติทางสมอง เช่น ดาวน์ซินโดรม ออทิสติก สมาธิสั้น ความบกพร่องทางสติปัญญา </p>
